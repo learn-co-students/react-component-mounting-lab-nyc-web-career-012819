@@ -11,10 +11,6 @@ class App extends Component {
     this.handleAddTimer();
   }
 
-  componentWillUnmount() {
-    
-  }
-
   // returns array of components written in JSX, mapped from this.state.timerIDs
   renderTimers = () => this.state.timerIDs.map(id => {
     return <Timer key={id} id={id} removeTimer={this.removeTimer} />
